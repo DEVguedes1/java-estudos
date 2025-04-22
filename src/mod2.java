@@ -67,9 +67,9 @@ public class mod2 {
 
         // entrada de usuario
         //usa o scanner la em cima
-        Scanner scanner = new Scanner(System.in); //objeto
+        Scanner entreada = new Scanner(System.in); //objeto
         System.out.print("coloque seu nome:");
-        String nome2= scanner.nextLine();// metodo pra ler strings
+        String nome2= entreada.nextLine();// metodo pra ler strings
         /*
         scanner.nextDouble()
         scanner.nextBoolean()
@@ -78,7 +78,7 @@ public class mod2 {
         System.out.println(nome2);
 
         System.out.print("Falo sem boca e ouço sem ouvidos. Não tenho corpo, mas vivo com o vento. O que sou eu?");
-        String pista= scanner.nextLine();
+        String pista= entreada.nextLine();
         System.out.println(pista);
         System.out.println("------------------------------------------------------------------------------------");
 
