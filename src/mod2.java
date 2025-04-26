@@ -82,5 +82,23 @@ public class mod2 {
         System.out.println(pista);
         System.out.println("------------------------------------------------------------------------------------");
 
+        Scanner nome1 = new Scanner(System.in);
+
+        System.out.println("qual é o seu nome?");
+        String nomes = nome1.nextLine();
+        System.out.println("qual seu endereço?");
+        String end = nome1.nextLine();
+        System.out.println("qual é o seu salario?");
+        double salario = nome1.nextDouble();
+        
+        System.out.println("dia do pagamento:");
+        var dia = nome1.nextInt();
+        System.out.println("mes do pagamento:");
+        var mes = nome1.nextInt();
+        System.out.println("digite o ano do pagamento: ");
+        var ano = nome1.nextInt();
+
+        System.out.println("------------------------------------------------------------------------------------");
+        System.out.println("meu nome é "+nomes+",moro no endereço "+end+",recebi o salario de R$"+salario+" no dia "+dia+"/"+mes+"/"+ano);
     }
 }

@@ -29,6 +29,9 @@ public class mod5 {
         System.out.println(numeros[0]);
         System.out.println(numeros.length);
 
+        float[] contagem = new float[10];
+        contagem[0]=30;//atribuindo valor 
+
         //arraylists
         ArrayList<String> nome= new ArrayList<>();
         nome.add("kakuso");
@@ -37,7 +40,7 @@ public class mod5 {
         nome.remove(0);
         System.out.println(nome.get(0));
 
+        //Métodos úteis como add(), remove(), size()
         
-
     }
 }
