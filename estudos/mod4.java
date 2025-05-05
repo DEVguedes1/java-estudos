@@ -1,3 +1,4 @@
+package estudos;
 public class mod4 {
     public static void main (String[] args) {
         //loops

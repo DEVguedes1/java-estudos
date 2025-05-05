@@ -1,3 +1,4 @@
+package estudos;
 import java.util.Scanner;
 
 public class mod2 {
