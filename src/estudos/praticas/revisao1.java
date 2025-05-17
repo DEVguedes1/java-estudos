@@ -125,3 +125,37 @@ class condicionais2 {
     }
 }
 
+/*Desafio:
+
+Dada uma nota (0 a 10), classifique o desempenho do aluno:
+
+9 a 10: "Excelente"
+
+7 a 8.9: "Bom"
+
+5 a 6.9: "Regular"
+
+Abaixo de 5: "Insuficiente"
+
+Exiba a classificação correspondente. */
+
+class condicionais3{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("de 0 ate 10");
+        System.out.print("digite a nota do aluno:");
+        Double nota = input.nextDouble();
+
+        if (nota<11 && nota>=9) {
+            System.out.println("Excelente");
+        } else if (nota<8.9 && nota>=7) {
+            System.out.println("Bom");
+        }else if (nota<6.9 && nota>=5) {
+            System.out.println("Regular");
+        }else if (nota<5){
+            System.out.println("Insuficiente");
+        }
+        input.close();
+    }
+}
