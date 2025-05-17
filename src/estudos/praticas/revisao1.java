@@ -159,3 +159,58 @@ class condicionais3{
         input.close();
     }
 }
+/*Peça ao usuário para digitar uma senha (suponha que já está armazenada em uma variável String).
+
+Verifique se:
+
+A senha tem pelo menos 8 caracteres.
+
+Contém pelo menos um número (dica: use Character.isDigit()).
+
+Contém pelo menos uma letra maiúscula.
+
+Exiba "Senha válida" ou "Senha inválida" com base nas regras.
+ */
+class condicionais4 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("digite sua senha:");
+        String senha = input.nextLine();
+
+       // boolean validaçao = senha.matches("[a-zA-Z0-9]{8}") ;
+
+    // REGEX Regex é uma forma curta e poderosa de dizer o que você quer encontrar/validar e mudar dentro de um texto.
+       // System.out.println(validaçao?"senha correta":"senha incorreta");
+
+        boolean tamanho= senha.length()>=8;
+        boolean TemNumero=true;
+        boolean TemLetraGrande=true;
+
+        for(int n=0; n<senha.length();n++){
+/*int n = 0: começa com n igual a 0, que é o índice do primeiro caractere da string.
+
+n < senha.length(): o laço continua enquanto n for menor que o tamanho da string. Ou seja, ele percorre do início ao fim da senha.
+
+n++: incrementa n em 1 a cada volta (vai para o próximo caractere). */
+            char a = senha.charAt(n);
+/*A função charAt(n) retorna o caractere na posição n da string.
+
+Esse caractere é armazenado na variável a para ser analisado depois (por exemplo, se é um número ou uma letra maiúscula). */
+            if (Character.isDigit(a)) {
+                TemNumero=true;
+                //  verifica se tem pelo menos um número.
+            }
+            if (Character.isUpperCase(a)) {
+                TemLetraGrande=true;
+                //  verifica se tem pelo menos um número.
+            }
+        }
+        if (tamanho&&TemLetraGrande&&TemNumero){
+            System.out.println("senha válida");
+        }else{
+            System.out.println("senha inválida");
+        }
+        input.close();
+    }
+}
