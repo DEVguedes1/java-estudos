@@ -214,3 +214,66 @@ Esse caractere é armazenado na variável a para ser analisado depois (por exemp
         input.close();
     }
 }
+// Crie um programa que simule uma calculadora com as operações: +, -, *, /.
+
+// O usuário deve fornecer:
+
+// Dois números (double).
+
+// Um operador (char).
+
+// Use switch-case para realizar a operação e exibir o resultado.
+
+// Trate o caso de divisão por zero.
+
+// O que será usado:
+
+// switch-case com char, default para operador inválido e if para divisão por zero.
+class condicionais5 {
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("digite um valor aq:");
+    byte valor1 = input.nextByte();
+
+    input.nextLine();
+
+    System.out.print("digite o sinal da operação:");
+    String sinal = input.next();
+    
+    input.nextLine();
+
+    System.out.print("digite um valor aq:");
+    byte valor2 = input.nextByte();
+
+    switch (sinal) {
+        case "+":
+            int soma = valor1 + valor2;
+            System.out.println(soma);
+            break;
+        case "-":
+            int sub = valor1 + valor2;
+            System.out.println(sub);
+            break;
+        case "x":
+            int mult = valor1 + valor2;
+            System.out.println(mult);
+            break;
+        case "*":
+            int multp = valor1 + valor2;
+            System.out.println(multp);
+            break;
+        case "/":
+            if (valor2 == 0){
+                System.out.println("não se divide por zero!!");
+            }else{
+                float div= valor1/valor2;
+                System.out.println(div);
+                break;
+            }
+        default:
+            break;
+    }
+    input.close();
+    }
+}
