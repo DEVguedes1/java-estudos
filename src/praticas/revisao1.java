@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class revisao1{
     public static void main(String[] args){
 
-        String name_user = " ";
+        String name_user = "fulano";
         int idade =  0;
         double alt = 0.0;
         boolean IsEstudant=true;
@@ -40,7 +40,7 @@ class operacoes{
         System.out.println(multiplicacao);
         int divisao = n1/n2;
         System.out.println(divisao); 
-        int r_divisao = n1 % n2;
+        double r_divisao = n1 % n2;
         System.out.println(r_divisao); 
     }
 
@@ -55,17 +55,17 @@ Se a idade for maior ou igual a 18, exiba "Maior de idade".
 Caso contrário, exiba "Menor de idade". */
 class condicionais{
     public static void main(String[] args){
-        Scanner valor = new Scanner(System.in);
-        System.out.print("qual é a sua idade?");
-        int idade = valor.nextInt();
+        Scanner input = new Scanner(System.in);
 
-        if (idade > 18) {
+        System.out.print("qual é a sua idade?");
+        int idade = input.nextInt();
+
+        if (idade >= 18) {
             System.out.println("Maior de idade");
         }else{
             System.out.println("Menor de idade");
-        }
-    
-        
+        }    
+        input.close();
     }
 
 }
@@ -108,9 +108,8 @@ class condicionais2 {
             if (genero.equals("h")) {
                 System.out.println("Acesso permitido");
             }else {
-                Scanner grav = new Scanner(System.in);
                 System.out.print("você esta gravida(s ou n)?");
-                String bebe = grav.next();
+                String bebe = input.next();
 
                 if (bebe.equals("n")) {
                     System.out.println("Acesso permitido");
@@ -149,12 +148,14 @@ class condicionais3{
 
         if (nota<11 && nota>=9) {
             System.out.println("Excelente");
-        } else if (nota<8.9 && nota>=7) {
+        } else if (nota>=7 && nota<8.9) {
             System.out.println("Bom");
-        }else if (nota<6.9 && nota>=5) {
+        }else if (nota>=5 && nota<6.9) {
             System.out.println("Regular");
         }else if (nota<5){
             System.out.println("Insuficiente");
+        }else{
+            System.out.println("inválido");
         }
         input.close();
     }
@@ -234,7 +235,7 @@ class condicionais5 {
     Scanner input = new Scanner(System.in);
 
     System.out.print("digite um valor aq:");
-    byte valor1 = input.nextByte();
+    double valor1 = input.nextDouble();
 
     input.nextLine();
 
@@ -244,34 +245,35 @@ class condicionais5 {
     input.nextLine();
 
     System.out.print("digite um valor aq:");
-    byte valor2 = input.nextByte();
+    double valor2 = input.nextDouble();
 
     switch (sinal) {
         case "+":
-            int soma = valor1 + valor2;
+            double soma = valor1 +valor2;
             System.out.println(soma);
             break;
         case "-":
-            int sub = valor1 + valor2;
+            double sub = valor1 - valor2;
             System.out.println(sub);
             break;
         case "x":
-            int mult = valor1 + valor2;
+            double mult = valor1 * valor2;
             System.out.println(mult);
             break;
         case "*":
-            int multp = valor1 + valor2;
+            double multp = valor1 * valor2;
             System.out.println(multp);
             break;
         case "/":
             if (valor2 == 0){
                 System.out.println("não se divide por zero!!");
             }else{
-                float div= valor1/valor2;
+                double div= valor1/valor2;
                 System.out.println(div);
-                break;
             }
+            break;
         default:
+            System.out.println("Operador inválido");
             break;
     }
     input.close();
