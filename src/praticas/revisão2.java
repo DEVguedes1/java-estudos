@@ -3,6 +3,7 @@
 // Crie uma variável diaDaSemana (int) representando um dia (1 a 7).
 
 // Use switch-case para exibir o nome do dia (ex: 1 → "Domingo", 2 → "Segunda", etc.).
+
 import java.util.Scanner;
 public class revisão2 {
     public static void main(String[] args) {
@@ -88,6 +89,6 @@ iremos determinar se ele é:
         }
 
     }
-    
+
 }
 
